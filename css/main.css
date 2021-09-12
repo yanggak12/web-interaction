@@ -91,3 +91,9 @@ a {
   margin-right: 0.2em;
   columns: rgb(29, 29, 31);
 }
+
+.main-message small {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5em;
+}
