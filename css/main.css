@@ -77,6 +77,12 @@ a {
   text-align: center;
 }
 
+.main-message small {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5em;
+}
+
 /* scroll-section-1 */
 
 .description {
@@ -92,8 +98,46 @@ a {
   columns: rgb(29, 29, 31);
 }
 
-.main-message small {
-  display: block;
+/* scroll-section-2 */
+
+#scroll-section-2 .main-message {
+  font-size: 3.5rem;
+}
+
+.desc-message {
+  width: 50%;
+  font-weight: bold;
+}
+
+.pin {
+  width: 1px;
+  height: 100px;
+  background-color: rgb(29, 29, 31);
+}
+
+/* mid-message */
+
+.mid-message {
+  font-size: 2rem;
+  color: #888;
+  padding: 0 1rem;
+}
+
+.mid-message strong {
+  color: rgb(29, 29, 31);
+}
+
+.canvas-caption {
+  color: #888;
+  padding: 0 1rem;
   font-size: 1.2rem;
-  margin-bottom: 0.5em;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7rem;
+  color: #fff;
+  background: darkorange;
 }
