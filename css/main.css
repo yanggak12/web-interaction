@@ -87,15 +87,17 @@ a {
 
 .description {
   font-size: 1.2rem;
-  columns: #888;
+  color: #888;
   padding: 0 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .description strong {
   font-size: 3rem;
   float: left;
   margin-right: 0.2em;
-  columns: rgb(29, 29, 31);
+  color: rgb(29, 29, 31);
 }
 
 /* scroll-section-2 */
@@ -118,6 +120,8 @@ a {
 /* mid-message */
 
 .mid-message {
+  max-width: 1000px;
+  margin: 0 auto;
   font-size: 2rem;
   color: #888;
   padding: 0 1rem;
@@ -128,6 +132,8 @@ a {
 }
 
 .canvas-caption {
+  max-width: 1000px;
+  margin: 0 auto;
   color: #888;
   padding: 0 1rem;
   font-size: 1.2rem;
@@ -140,4 +146,34 @@ a {
   height: 7rem;
   color: #fff;
   background: darkorange;
+}
+
+@media (min-width: 1024px) {
+  #scroll-section-0 h1 {
+    font-size: 9vw;
+  }
+  .main-message {
+    font-size: 4vw;
+  }
+  .description {
+    font-size: 2rem;
+  }
+  .description strong {
+    font-size: 6rem;
+  }
+  #scroll-section-2 .main-message {
+    font-size: 6vw;
+  }
+  .main-message small {
+    font-size: 1.5vw;
+  }
+  .desc-message {
+    width: 20%;
+  }
+  .mid-message {
+    font-size: 4vw;
+  }
+  .canvas-caption {
+    font-size: 2rem;
+  }
 }
