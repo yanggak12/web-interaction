@@ -50,6 +50,17 @@
         i
       ].objs.container.style.height = `${sceneInfo[i].scrollHeight}px`;
     }
+    // 새로고침 했을 경우 Scene 을 바로 설정해주기 위함
+    yOffset = window.scrollY;
+    let totalScrollHeight = 0;
+    for (let i = 0; i < sceneInfo.length; i++) {
+      totalScrollHeight += sceneInfo[i].scrollHeight;
+      if (totalScrollHeight >= yOffset) {
+        currentScene = i;
+        break;
+      }
+    }
+    document.body.setAttribute("id", `show-scene-${currentScene}`);
   }
   function scrollLoop() {
     prevScrollHeight = 0;
@@ -63,12 +74,14 @@
       if (currentScene === 0) return; // 브라우저 바운스 효과 마이너스 되는 경우를 예방함
       currentScene--;
     }
-    console.log(currentScene);
+    document.body.setAttribute("id", `show-scene-${currentScene}`);
   }
+
+  window.addEventListener("load", setLayout); // 웹페이지에 모든 요소들(이미지 등)이 로드가 완료되었을때 실행
+  // window.addEventListener("DOMContentLoaded", setLayout); // DOM구조만 로드가 끝나면 바로 실행.
   window.addEventListener("resize", setLayout);
   window.addEventListener("scroll", () => {
     yOffset = window.scrollY;
     scrollLoop();
   });
-  setLayout();
 })();
